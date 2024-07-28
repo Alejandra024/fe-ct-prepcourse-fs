@@ -7,6 +7,15 @@ function esNumeroEntero(numero) {
   // -1212 ---> true 
   // 121.212 ---> false 
   // Tu código:
+  if (typeof numero !== 'number' || isNaN(numero)) {
+    return false;
+  }
+  
+  // Verificar si el número es un entero
+  return numero === Math.floor(numero);
+
+  
+
 }
 
 module.exports = esNumeroEntero;

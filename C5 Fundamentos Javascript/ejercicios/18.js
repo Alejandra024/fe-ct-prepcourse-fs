@@ -8,6 +8,19 @@ function esVocal(letra) {
   // "n" ---> "Dato incorrecto"
   // "texto largo" ---> "Dato incorrecto"
   // Tu código:
+   // Verifica que el argumento sea una cadena de texto de longitud 1
+   if (typeof letra === 'string' && letra.length === 1) {
+    // Convierte el argumento a minúsculas para una comparación insensible a mayúsculas
+    letra = letra.toLowerCase();
+    
+    // Verifica si la letra es una vocal
+    if ('aeiou'.includes(letra)) {
+      return 'Es vocal';
+    }
+  }
+  
+  // Retorna "Dato incorrecto" si la letra no es una vocal o el argumento es inválido
+  return 'Dato incorrecto';
 }
 
 module.exports = esVocal;

@@ -4,6 +4,10 @@ function obtenerSaludo(nombre) {
   // Ejemplo: "Martin" ---> "Hola Martin!"
   // Retorna el nuevo string. 
   // Tu código:
+  if (typeof nombre === 'string' ) {
+    // Concatenar el saludo con el nombre
+    return `Hola ${nombre}!`;
+  }
 }
 
 module.exports = obtenerSaludo;
